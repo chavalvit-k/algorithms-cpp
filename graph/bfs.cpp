@@ -32,7 +32,10 @@ int main() {
         visited[u] = true;
         q.pop();
         for (auto v: g[u]) {
-            if (!visited[v]) q.push(v);
+            if (!visited[v]) {
+                visited[v] = true;
+                q.push(v);
+            }
         }
     }
 
